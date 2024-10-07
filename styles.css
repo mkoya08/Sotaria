@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    /*dont delete this, for color*/
+}
+
+body {
+    margin: 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.navbar__container {
+    display: flex; /*forces navbar__right and left on one line*/
+    justify-content: space-between; /*forces to the end*/
+    background-color: transparent;
+    padding-top: 20px;
+    display: relative;
+    z-index: 999; 
+    height: 70px;
+    align-items: center;
+    z-index: 999;
+    position: relative;
+}
+
+.navbar__right {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar__logo__text { /*Solaris item*/
+    text-decoration: none;
+    color: white; 
+    font-weight: bold;
+    font-size: 3em;
+}
+
+#navbar__logo {
+    width: 50px; 
+    padding-left: 30px; 
+    padding-right: 10px;
+}
+
+.navbar__left {
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__menu {
+    display: flex;
+}
+
+.navbar__items {
+    list-style: none;
+}
+
+.navbar__links {
+    text-decoration: none; /*remove underline*/
+    padding: 0 1rem; /*gives space between the elements*/
+    color: white; 
+}
+
+@media screen and (max-width: 960px) { /*code for when on a mobile bar*/
+    .navbar__container {
+        display: flex; 
+        justify-content: space-between; 
+    }
+    
+}
+
+
+/*hero section*/
+
+.main {
+    background-color: black;
+}
+
+.main__container {
+    width:100vw; 
+    margin-bottom: 10px; 
+} 
+
+.main__content { /*first few lines is to align img in the center */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    position: relative; 
+    text-align: center;
+    color: white; 
+    background-size: cover;
+    /*Might have to edit the image in krita for gradient
+    */
+}
+
+
+#spaceX_launch {
+    height:100vh;
+    width:100vw; 
+    position: relative; 
+    
+    margin:-70px; 
+    
+}
+
+
+.main__text {
+    position: absolute; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -130%); /*right/left, top/bottom */
+}
+
+.main__title {
+    font-weight: bold; 
+    font-size: 3em; 
+}
+
+/*Hero section - Introducing the Team*/
+
+.main__team__introduction {
+    justify-content: center;
+    align-items: center; 
+
+}
+
+.main__team__title { /*appears uncentered even though it isn't, maybe shift to left a bit*/
+    color: white; 
+    text-align: center;
+    padding-top: 100px;
+}
+
+.team__intro__buttons {
+    display: flex; 
+    justify-content: center;
+}
+
+.team__maria, .team__logan, .team__max {
+    width: 300px; 
+    height: 400px; 
+    margin-right: 50px; 
+    margin-left:50px;
+    margin-top: 20px; 
+    border-radius: 10%;
+    background-color: rgb(58, 58, 58);
+    border: none;
+    color: white; 
+}
+
+.team__maria:hover, .team__logan:hover, .team__max:hover {
+    transform: scale(1.075); /*increase in size when we hover*/
+    transition: 0.2s ease-in-out; 
+    cursor: pointer; 
+}
+
+
+.team__img {
+    width:200px;
+    border-radius: 50%;
+}
+
+.team__intro {
+    justify-content: center;
+    margin: 30px;
+}
+
+/*hero section intro to the chemosynthetic process*/
+
+.main__chemo__process {
+    justify-content: center;
+    align-items: center; 
+    margin-top: 50px; 
+    margin-left: 200px; 
+    margin-right: 200px; 
+    margin-top: 70px; 
+}
+
+.main__chemo__title {
+    color: white; 
+    margin-bottom: 30px; 
+}
+
+.main__chemo__info {
+    color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__chemo__description {
+    padding-left: 30px; 
+    padding-bottom: 30px;
+}
+
+.main__chemo__text {
+    padding-top: 10px; 
+    padding-bottom: 20px; 
+}
+
+.chemo__learnMore { /*fix this later*/
+    padding: 10 20 10 20; 
+    
+}
+
+/*Hero section - Ending page*/
+.main__ending {
+
+    background: linear-gradient(to top, transparent, black),
+    url("images/space__ending.jpg");
+    width:100vw;
+    height:50vh;
+}
+
+
+.main__ending { /*first few lines is to align img in the center*/
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative; 
+    text-align: center;
+    color: white; 
+    background-color: black;
+    margin-top: 70px; 
+}
+
+#main__ending__img {
+    align-items: center;
+    position: absolute;
+    object-fit: fill;
+}
+
+.ending__text {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -70%);
+}
+
+.ending__btn {
+    padding-top: 50px; 
+    
+}
+
+.ending__button {
+    cursor: pointer;
+    outline: 0;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    background-color: rgb(57, 57, 107);
+    border: none; 
+    padding: 10px 12px;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: white;
+
+} 
+
+.ending__button:hover{
+    color: blue;
+    background-color: white;
+}
